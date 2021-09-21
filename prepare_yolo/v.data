@@ -1,0 +1,7 @@
+classes= PREPARE_CLASSES
+train  = PREPARE_TRAIN
+valid  = PREPARE_VALID
+#valid = data/coco_val_5k.list
+names = PREPARE_NAME
+backup = PREPARE_W
+eval=coco

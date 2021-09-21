@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>frame_dataset</class>
+ <widget class="QMainWindow" name="frame_dataset">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>550</width>
+    <height>289</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>550</width>
+    <height>289</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>550</width>
+    <height>289</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Create Dataset</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_browse_in">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>20</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Browse...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_in">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>18</y>
+      <width>341</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Folder with all the videos</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Videos path:</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chk_read">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>100</y>
+      <width>231</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Sometimes, fast method can fail for some videos</string>
+    </property>
+    <property name="text">
+     <string>Read frames using fast method</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spn_classes">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>140</y>
+      <width>48</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Number of kind of objects to detect by YOLO</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>171</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Classes to recognize:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spn_size_w">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>220</y>
+      <width>48</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Width</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>181</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Prefixed ROI particle size:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spn_size_h">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>220</y>
+      <width>48</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Height</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>60</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Data output:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_out">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>58</y>
+      <width>341</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>Folder where images and annotations will be saved</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_browse_out">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>60</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Browse...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_start">
+    <property name="geometry">
+     <rect>
+      <x>350</x>
+      <y>140</y>
+      <width>191</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>START!</string>
+    </property>
+   </widget>
+   <widget class="QProgressBar" name="prb_images">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>260</y>
+      <width>531</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>24</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>191</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Take object from % frames:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spn_frames_per_video">
+    <property name="geometry">
+     <rect>
+      <x>212</x>
+      <y>180</y>
+      <width>48</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>For each video, take this % of frames (frames will be equispaced)</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>txt_in</tabstop>
+  <tabstop>btn_browse_in</tabstop>
+  <tabstop>txt_out</tabstop>
+  <tabstop>btn_browse_out</tabstop>
+  <tabstop>chk_read</tabstop>
+  <tabstop>spn_classes</tabstop>
+  <tabstop>spn_frames_per_video</tabstop>
+  <tabstop>spn_size_w</tabstop>
+  <tabstop>spn_size_h</tabstop>
+  <tabstop>btn_start</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

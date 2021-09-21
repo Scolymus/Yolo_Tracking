@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>tracking_win</class>
+ <widget class="QMainWindow" name="tracking_win">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>580</width>
+    <height>330</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>580</width>
+    <height>330</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>580</width>
+    <height>330</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Tracking</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="btn_browse_dataset">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>27</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Browse...</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>29</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Dataset path:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_dataset">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>25</y>
+      <width>351</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Folder where you have the cfg file (must be called &amp;quot;network.cfg&amp;quot;), the names (must be called &amp;quot;classes.names&amp;quot;) and a folder with the weights, where the file &amp;quot;weights/network-best.weight&amp;quot; will be selected.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chk_run">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>147</y>
+      <width>131</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Predection run</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>229</y>
+      <width>211</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When the detection process is done, the window where to detect will be wrapped to this size.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Following detections final size:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>188</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>w</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>405</x>
+      <y>188</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>h</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>45</x>
+      <y>187</y>
+      <width>171</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;When the detection process is done, the window where to detect will be wrapped to this size. This is only for the first frame, where the window is the entire frame.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>First detection final size:</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spb_wf">
+    <property name="geometry">
+     <rect>
+      <x>222</x>
+      <y>185</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>9999</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spb_hf">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>185</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>9999</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spb_ww">
+    <property name="geometry">
+     <rect>
+      <x>222</x>
+      <y>143</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>9999</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_8">
+    <property name="geometry">
+     <rect>
+      <x>405</x>
+      <y>146</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>h</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>146</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>w</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spb_hw">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>143</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>9999</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spb_particles">
+    <property name="geometry">
+     <rect>
+      <x>222</x>
+      <y>269</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>9999</number>
+    </property>
+    <property name="value">
+     <number>500</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>15</x>
+      <y>271</y>
+      <width>201</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Particles positions are stored in RAM. To manage RAM, we allow to modify the maximum particles to detect.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Maximum particles to detect:</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chk_load">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>185</y>
+      <width>141</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load from before</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="chk_CUDA">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>223</y>
+      <width>141</width>
+      <height>26</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Use CUDA</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_start">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>263</y>
+      <width>251</width>
+      <height>64</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Start tracking!</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>63</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Videos path:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_browse_videos">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>61</y>
+      <width>89</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Browse...</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txt_videos">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>59</y>
+      <width>351</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Folder where your videos to analyze are.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_11">
+    <property name="geometry">
+     <rect>
+      <x>41</x>
+      <y>146</y>
+      <width>171</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;To do detection, we use a window around each particle of this size from the original frame.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>Size of window to detect:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_12">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>230</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>w</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spb_w">
+    <property name="geometry">
+     <rect>
+      <x>222</x>
+      <y>227</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>9999</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spb_h">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>227</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>9999</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_13">
+    <property name="geometry">
+     <rect>
+      <x>405</x>
+      <y>230</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>h</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>41</x>
+      <y>104</y>
+      <width>171</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="toolTip">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;If non-zero, the object detected will mantain its own center position, but its size will be determined by these numbers.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="text">
+     <string>All objects have this size:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_14">
+    <property name="geometry">
+     <rect>
+      <x>405</x>
+      <y>104</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>h</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_15">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>104</y>
+      <width>21</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>w</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spb_pw">
+    <property name="geometry">
+     <rect>
+      <x>222</x>
+      <y>101</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>9999</number>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spb_ph">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>101</y>
+      <width>71</width>
+      <height>29</height>
+     </rect>
+    </property>
+    <property name="maximum">
+     <number>9999</number>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>txt_dataset</tabstop>
+  <tabstop>btn_browse_dataset</tabstop>
+  <tabstop>txt_videos</tabstop>
+  <tabstop>btn_browse_videos</tabstop>
+  <tabstop>spb_pw</tabstop>
+  <tabstop>spb_ph</tabstop>
+  <tabstop>spb_ww</tabstop>
+  <tabstop>spb_hw</tabstop>
+  <tabstop>spb_wf</tabstop>
+  <tabstop>spb_hf</tabstop>
+  <tabstop>spb_w</tabstop>
+  <tabstop>spb_h</tabstop>
+  <tabstop>spb_particles</tabstop>
+  <tabstop>chk_run</tabstop>
+  <tabstop>chk_load</tabstop>
+  <tabstop>chk_CUDA</tabstop>
+  <tabstop>btn_start</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
